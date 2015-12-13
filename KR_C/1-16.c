@@ -13,6 +13,7 @@ main()
 
     max = 0;
     while (len = get_line(line, MAXLINE) > 0) {
+        printf ("%d, %s", len, line);
         if (len > max) {
             max = len;
             copy(longest, line);
@@ -26,16 +27,21 @@ main()
 
 int get_line(char s[], int lim)
 {
-    int character, i;
+    int character, i, j;
 
-    for (i = 0; i < lim - 1 && (character = getchar()) != EOF && character != '\n'; ++i) {
-        s[i] = character;
+    j = 0;
+    for (i = 0; (character = getchar()) != EOF && character != '\n'; ++i) {
+        if (i < (lim - 2)) {
+            s[j] = character;
+            ++j;
+        }
+        if (character == '\n') {
+            s[j] = character;
+            ++j;
+            ++i;
+        }
     }
-    if (character == '\n') {
-        s[i] = character;
-        ++i;
-    }
-    s[i] = '\0';
+    s[j] = '\0';
     return i;
 }
 
