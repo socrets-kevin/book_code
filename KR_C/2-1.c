@@ -11,5 +11,4 @@ main()
     printf("singed int min = %d\n", INT_MIN);
     printf("singed long min = %ld\n", LONG_MIN);
     printf("singed long max = %ld\n", LONG_MAX);
-    
 }
