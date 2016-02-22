@@ -9,3 +9,5 @@ main()
     }
     printf ("\n%.0f\n", character_number);
 }
+
+
