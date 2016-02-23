@@ -36,7 +36,7 @@
 
 float fahr_celsius(float fahr);
 
-main() 
+int main() 
 {
     float fahr;
 

@@ -4,7 +4,7 @@
 
 int get_line(char line[], int maxline);
 
-main() 
+int main() 
 {
     int len;
     char line[MAXLINE];
