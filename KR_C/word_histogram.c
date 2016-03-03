@@ -6,7 +6,7 @@
 #define OUT 0
 
 
-main()
+int main()
 {
     int character;
     int character_number;
