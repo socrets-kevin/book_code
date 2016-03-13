@@ -1,6 +1,6 @@
 ##About
 ----------------
-Some clutter codes for classic computer science books like **CSAPP** **SICP** **K&R.C** **eg.**  
+Some code snippets for classic cs books like **CSAPP** **SICP** **K&R** **eg.** 
 
 **Just for learning**
 
