@@ -4,15 +4,20 @@
 
 int get_line(char line[], int max);
 int strrindex(char source[], char search_for[]);
-char pattern[] = "ou";
+char pattern[] = "ould";
 
 int main()
 {
     char line[MAXLINE];
-    
-    if ((get_line(line, MAXLINE)) > 0) {
-	printf("%d", strrindex(line, pattern));
+    int found_number = 0;
+
+    while((get_line(line, MAXLINE)) > 0) {
+	if (strrindex(line, pattern) > 0) {
+	    printf("%s", line);
+	    found_number++;
+	}
     }
+    return found_number;
 }
 
 int get_line(char s[], int lim) {
