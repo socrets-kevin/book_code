@@ -19,7 +19,7 @@ void unget_str(char s[]) {
     int len = strlen(s);
 
     while (len > 0) {
-	unget_ch(s[len]);
 	len--;
+	unget_ch(s[len]);
     }
 }
