@@ -15,7 +15,7 @@ void unget_ch(int c) {
     }
 }
 
-void ungets(char s[]) {
+void unget_str(char s[]) {
     int len = strlen(s);
 
     while (len > 0) {
