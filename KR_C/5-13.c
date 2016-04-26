@@ -22,16 +22,20 @@ int main(int argc, char* argv[])
     	error("usage: tail [-n]");
     }
 
-    char *line = malloc(MAXLINES * sizeof(char));
+    char *line = malloc(MAXLEN * sizeof(char));
     char *line_pt[MAXLINES];
     int len;
     int line_number = 0;
     while ((len = get_line(line, MAXLEN)) > 0) {
     	line_pt[line_number] = line;
 	line_number++;
-	line = malloc(MAXLINES * sizeof(char));
+	line = malloc(MAXLEN * sizeof(char));
     }
 
+    if (line_number > MAXLINES) {
+	line_number = MAXLINES;
+    }
+    
     if ((n < 1) || (n > line_number)) {
 	n = line_number;
     }
