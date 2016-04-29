@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 #define MAXWORD 100
-#define KEYNUMBER 10
+#define KEYNUMBER 11
 
 struct key {
     char *word;
